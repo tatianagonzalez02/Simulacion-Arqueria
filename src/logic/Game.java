@@ -1,25 +1,53 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package logic;
 
 import java.util.ArrayList;
 
 /**
- *Clase correspondiente a una partida
- * @author USER-LENOVO
+ * Clase correspondiente a una partida
+ *
+ * @author David Guerrero
+ * @author Karol Alfonso
  */
 public class Game {
+
     private float averageLucky;
     private float averageExperience;
     private ArrayList<RoundGroup> listRoundGroups;
-
-    public Game() {
-    listRoundGroups=new ArrayList<>();
-    }
-    public void calculateAverageLucky(){}
-    public void calculateAverageExperience(){}
+    private int countVictoriesTeamA;
+    private int countVictoriesTeamB;
+    private ArrayList<Team> listTeams;
     
+    public Game(double valueEscenary, ArrayList<Team> listTeams) {
+        this.countVictoriesTeamA = 0;
+        this.countVictoriesTeamB = 0;
+        listRoundGroups = new ArrayList<>();
+        this.listTeams=listTeams;
+        startGame(valueEscenary);
+    }
+
+    /**
+     * Iniciar Partida
+     *
+     * @param valueEscenary
+     */
+    private void startGame(double valueEscenary) {
+        //Realizar n rondas grupales hasta que algun equipo gane 10 
+//    if(countVictoriesTeamA!=10 || countVictoriesTeamB!=10){
+        RoundGroup roundGroup=new RoundGroup(valueEscenary);
+        roundGroup.playRoundIndividual(listTeams);
+        if(roundGroup.getWinnerRound().equals("A")){
+            countVictoriesTeamA+=1;
+        }else if(roundGroup.getWinnerRound().equals("B")){
+        countVictoriesTeamB+=1;
+        }
+        listRoundGroups.add(roundGroup);
+       }
+//       }
+
+    public void calculateAverageLucky() {
+    }
+
+    public void calculateAverageExperience() {
+    }
+
 }
