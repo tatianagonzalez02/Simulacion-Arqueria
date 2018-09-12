@@ -1,15 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package logic;
 
 /**
+ * Clase que maneja un lanzamiento
  *
- * @author USER-LENOVO
+ * @author David Guerrero
+ * @author Karol Alfonso
  */
 public class Launching {
+
     private int id;
     private int angulo;
     private int speed;//velocidad
@@ -53,6 +51,5 @@ public class Launching {
     public void setDistance(float distance) {
         this.distance = distance;
     }
-    
-    
+
 }

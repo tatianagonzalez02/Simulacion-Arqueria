@@ -1,18 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package logic;
 
 import java.util.ArrayList;
 
 /**
+ * Clase Persona Jugador
  *
- * @author USER-LENOVO
+ * @author David Guerrero
+ * @author Karol Alfonso
  */
 public class Person {
-    private int id=1;
+
+    private int id = 1;
     private String name;
     private int age;
     private EnumGender gender;
@@ -22,17 +20,17 @@ public class Person {
     private float lucky;//suerte
     private ArrayList<Launching> listLaunching;
 
-    public Person(String name, EnumGender gender, int age, int resistence, 
+    public Person(String name, EnumGender gender, int age, int resistence,
             int precision, int experience, float lucky) {
-        this.id +=1;
+        this.id += 1;
         this.name = name;
-        this.gender=gender;
+        this.gender = gender;
         this.age = age;
         this.resistence = resistence;
         this.precision = precision;
         this.experience = experience;
         this.lucky = lucky;
-        this.listLaunching=new ArrayList<>();
+        this.listLaunching = new ArrayList<>();
     }
 
     public ArrayList<Launching> getListLaunching() {
@@ -43,7 +41,6 @@ public class Person {
         this.listLaunching = listLaunching;
     }
 
-    
     public EnumGender getGender() {
         return gender;
     }
@@ -107,6 +104,5 @@ public class Person {
     public void setLucky(float lucky) {
         this.lucky = lucky;
     }
-    
-    
+
 }

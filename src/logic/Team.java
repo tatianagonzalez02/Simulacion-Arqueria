@@ -1,17 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package logic;
 
 import java.util.ArrayList;
 
 /**
+ * Clase que almacena lo correspondiente a un equipo
  *
- * @author USER-LENOVO
+ * @author David Guerrero
+ * @author Karol Alfonso
  */
 public class Team {
+
     private int id;
     private String nameTeam;
     private ArrayList<Person> listPlayers;
@@ -45,6 +43,5 @@ public class Team {
     public void setListPlayers(ArrayList<Person> listPlayers) {
         this.listPlayers = listPlayers;
     }
-    
-    
+
 }

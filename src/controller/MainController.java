@@ -1,18 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
+
+import logic.ManagerArchery;
 
 /**
  *
- * @author USER-LENOVO
+ * @author David Guerrero
+ * @author Karol Alfonso
  */
 public class MainController {
-
+private ManagerArchery managerArchery;
     public MainController() {
+    managerArchery=new ManagerArchery();
     }
-    
-    public void runPrincipal(){}
+
+    public void runPrincipal() {
+        managerArchery.startSimulation();
+    }
 }
